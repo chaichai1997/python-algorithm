@@ -3,7 +3,6 @@
 
 """
 实现链表的逆序
-主要思路：将链表的指针域指向前一个节点
 """
 
 
@@ -14,7 +13,13 @@ class LNode:
         self.next = None  # 指针域
 
 
-def Reverse(head):
+"""
+主要思路：将链表的指针域指向前一个节点
+input： head 头节点
+"""
+
+
+def reverse(head):
     if head == None or head.next == None:  # 判断列表是否为空
         return
     pre = None  # 前驱节点
@@ -40,6 +45,31 @@ def Reverse(head):
     head.next = cur
 
 
+"""
+ 使用递归法实现逆序
+"""
+
+
+def recursive_reverse(head):
+    if head is None or head.next is None:  # 如果链表中只有一个元素
+        return head
+    else:
+        new_head = recursive_reverse(head.next)
+        head.next.next = head
+        head.next = None
+    return new_head
+
+
+def reverse_2(head):
+    if head is None:
+        return
+    else:
+        frist_node = head.next
+        new_head = recursive_reverse(frist_node)
+        head.next = new_head
+        return new_head
+
+
 if __name__ == '__main__':
     i = 1
     head = LNode()
@@ -61,7 +91,8 @@ if __name__ == '__main__':
         cur = cur.next
 
     print('\n逆序后链表：', end='')
-    Reverse(head)
+    # Reverse(head)
+    reverse_2(head)
     cur = head.next
     while cur != None:
         print(cur.data, end='')
