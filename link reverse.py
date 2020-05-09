@@ -91,8 +91,18 @@ def reverse_insert(head):
 
 
 """
-
+链表逆序输出
 """
+
+
+def reverse_print(first_node):
+    if first_node is None:
+        return
+    else:
+        reverse_print(first_node.next)
+        print(first_node.data)
+
+
 if __name__ == '__main__':
     i = 1
     head = LNode()
@@ -112,6 +122,10 @@ if __name__ == '__main__':
     while cur != None:
         print(cur.data, end='')
         cur = cur.next
+
+    # 链表逆序输出
+    print('\n')
+    reverse_print(head.next)
 
     print('\n逆序后链表：', end='')
     # Reverse(head)
