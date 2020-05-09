@@ -70,6 +70,29 @@ def reverse_2(head):
         return new_head
 
 
+"""
+插入法实现逆序
+"""
+
+
+def reverse_insert(head):
+    if head.next is None or head is None:
+        return
+    else:
+        cur = None
+        next = None
+        cur = head.next.next
+        head.next.next = None   # 链表的第一个节点为尾节点
+        while cur is not None:
+            next = cur.next
+            cur.next = head.next
+            head.next = cur
+            cur = next
+
+
+"""
+
+"""
 if __name__ == '__main__':
     i = 1
     head = LNode()
@@ -92,7 +115,8 @@ if __name__ == '__main__':
 
     print('\n逆序后链表：', end='')
     # Reverse(head)
-    reverse_2(head)
+    # reverse_2(head)
+    reverse_insert(head)
     cur = head.next
     while cur != None:
         print(cur.data, end='')
