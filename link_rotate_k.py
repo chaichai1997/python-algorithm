@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # author = "chaichai"
-from find_k import construct_link
-from find_k import print_link
+from link_find_k import construct_link
+from link_find_k import print_link
 
 
 class LNode:
@@ -31,6 +31,7 @@ def rotate_k(head, k):
             tmp.next = None
             fast.next = head.next
             head.next = slow
+
 
 if __name__ == '__main__':
     head = construct_link()

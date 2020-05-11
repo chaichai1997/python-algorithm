@@ -30,12 +30,12 @@ def find_middle_node(head):
     else:
         fast = head   # 向前两步
         slow = head   # 向前一步
-        slow_pre = head  # fast到链表尾部时，slow到链表中部
-        while fast is not None and fast.next is not None:
+        slow_pre = head
+        while fast is not None and fast.next is not None:  # fast到链表尾部时，slow到链表中部
             slow_pre = slow
             slow = slow.next
             fast = fast.next.next
-        # 将链表切分为两个
+        # 将链表切分为两个子表
         slow_pre.next = None
         return slow
 
@@ -74,7 +74,6 @@ def re_order(head):
         cur1 = head.next
         mid = find_middle_node(head.next)
         cur2 = reverse(mid)
-        tmp = None
         while cur1.next is not None:
             tmp = cur1.next
             cur1.next = cur2
