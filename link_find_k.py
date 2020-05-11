@@ -35,7 +35,7 @@ def construct_link():
 def print_link(head):
     cur = head.next
     while cur is not None:
-        print(cur.data, end='')
+        print(cur.data,  end=' ')
         cur = cur.next
 
 
