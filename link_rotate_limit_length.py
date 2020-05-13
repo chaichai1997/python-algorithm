@@ -45,7 +45,7 @@ def rotate_limit(head, k):
         pre.next = reverse(begin)
         begin.next = p_next
         pre = begin
-        begin = p_next
+        begin = begin.next
         i = 1
 
 
