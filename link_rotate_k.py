@@ -3,6 +3,13 @@
 from link_find_k import construct_link
 from link_find_k import print_link
 
+"""
+将链表向右反转k步
+1 2 3 4 5 6 7
+翻转3步
+7 6 5 1 2 3 4
+"""
+
 
 class LNode:
     def __init__(self):

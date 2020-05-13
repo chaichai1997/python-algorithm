@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 # author = "chaichai"
-from  link_find_k import print_link, LNode
+from link_find_k import print_link, LNode
 
+
+"""
+判断链表是否有环及找到环入口点
+"""
 
 def construct_link():
     i = 1

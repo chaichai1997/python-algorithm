@@ -4,6 +4,14 @@
 from link_find_k import LNode, print_link
 
 
+"""
+将两个有序链表合并为一个链表
+1 3 5
+2 4 6
+合并为：1 2 3 4 5 6
+"""
+
+
 def constract_link(start):
     i = start
     head = LNode()

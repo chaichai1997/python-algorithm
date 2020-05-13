@@ -3,6 +3,13 @@
 from link_find_k import print_link, LNode, construct_link
 
 """
+将链表已固定长度反转
+1 2 3 4 5 6 7 
+以三为固定长度
+3 2 1 6 5 4 7
+"""
+
+"""
 对不带头节点的链表进行反转
 """
 

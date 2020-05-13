@@ -2,6 +2,12 @@
 # author = "chaichai"
 from link_find_k import print_link
 
+
+"""
+删除链重复项
+"""
+
+
 class LNode:
     def __init__(self):
         self.data = None

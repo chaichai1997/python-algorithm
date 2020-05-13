@@ -2,6 +2,14 @@
 # author = "chaichai"
 from link_find_k import LNode, print_link
 
+"""
+链表求和
+1 2 3
+4 5 6
+和为：
+975 首节点为个位
+"""
+
 
 def add(h1, h2):
     if h1 is None or h1.next is None:
