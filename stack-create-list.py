@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 # author = "chaichai"
 
+"""
+如何实现栈,使其具有压栈、弹栈、取栈顶元素、判断是否为空等
+方法1：借助python list结构实现
+"""
 
 class Stack:
     def __init__(self):
