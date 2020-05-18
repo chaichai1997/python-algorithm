@@ -82,6 +82,8 @@ class QueueLink:
         else:
             p = self.qhead
             self.qhead = p.next
+            if self.qhead is None:
+                self.qend = None
 
     def get_front(self):
         if self.is_empyt():
