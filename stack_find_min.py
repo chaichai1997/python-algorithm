@@ -3,6 +3,12 @@
 from stack_create import Stack
 
 
+"""
+用时间复杂度为o(1)的算法求栈中最小元素
+思路：以空间换时间。两个栈，一个用于存储数据，一个用于存储最小值
+"""
+
+
 class StackMin:
     def __init__(self):
         self.elem = Stack()  # 用于存储栈中元素
