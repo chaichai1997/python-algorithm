@@ -33,19 +33,19 @@ class QueueSort:
     def __init__(self):
         self.squeue = deque()
 
-    def in_queue(self, user):
+    def in_queue(self, user):  # 进入队列
         user.set_seq(len(self.squeue)+1)
         self.squeue.append(user)
 
-    def out_queue(self):
+    def out_queue(self):  # 出队
         self.squeue.popleft()
         self.update()
 
-    def random_out(self, user):
+    def random_out(self, user):   # 任意用户出队
         self.squeue.remove(user)
         self.update()
 
-    def update(self):
+    def update(self):   # 排名更新
         i = 1
         for user in self.squeue:
             user.set_seq(i)
