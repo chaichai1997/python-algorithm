@@ -20,7 +20,6 @@ def array_to_tree(array, start, end):
         root = BiNode()
         mid = (start + end + 1) // 2
         root.data = array[mid]
-        print(mid)
         root.left = array_to_tree(array, start, mid - 1)
         root.right = array_to_tree(array, mid + 1, end)
     else:
