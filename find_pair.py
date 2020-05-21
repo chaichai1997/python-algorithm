@@ -26,10 +26,8 @@ def find_pairs(data):
             else:     # 字典中已存在和相同的数对
                 p = sum_pair[s]
                 print('(' + str(p.first) + ',' + str(p.second) + '),' + '(' + str(data[i]) + ',' + str(data[j]) + ')')
-                return True
             j += 1
         i += 1
-    return False
 
 
 if __name__ == '__main__':
