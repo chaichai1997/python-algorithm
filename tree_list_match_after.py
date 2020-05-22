@@ -38,7 +38,7 @@ def is_tree_after(arr, start, end):
 if __name__ == '__main__':
     arr = [1, 3, 2, 5, 7, 6, 4]
     result = is_tree_after(arr, 0, len(arr)-1)
-    print(arr, end= ' ')
+    print(arr, end=' ')
     if result:
         print("是某一二元查找树的后序遍历序列")
     else:
