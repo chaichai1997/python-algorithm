@@ -11,11 +11,11 @@ from tree_find_max_child import Test
 
 
 def tree_is_equal(root1, root2):
-    if root1 is None or root2 is not None:
+    if root1 is None and root2 is not None:
         return False
-    elif root1 is None or root2 is None:
+    elif root1 is None and root2 is None:
         return True
-    elif root1 is not None or root2 is None:
+    elif root1 is not None and root2 is None:
         return False
     elif root1.data == root2.data:
         return tree_is_equal(root1.left, root2.left) and tree_is_equal(root1.right, root2.right)
