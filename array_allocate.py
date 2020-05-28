@@ -41,7 +41,6 @@ if __name__ == '__main__':
             if p_tine[i] > totap:
                 totap = p_tine[i]
             i += 1
-
         print(totap)
 
 
