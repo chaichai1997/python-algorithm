@@ -19,4 +19,9 @@ def allocate(d, p):  # d- disk p- process
 
 
 if __name__ == '__main__':
-    
+    d = [120, 120, 120]
+    p = [60, 80, 80, 20, 80]
+    if allocate(d, p):
+        print("succeed")
+    else:
+        print("False")
