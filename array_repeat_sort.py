@@ -17,6 +17,7 @@
 """
 
 
+
 def sort_repeat(array):
     data_count = dict()
     for i in array:
