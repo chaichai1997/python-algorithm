@@ -23,7 +23,7 @@ def string_arrange(string, start):
         while i < len(string):
             swap(string, start, i)
             string_arrange(string, start + 1)
-            swap(string, start, i)
+            swap(string, start, i)  # 切换回原状态
             i += 1
 
 
