@@ -8,7 +8,7 @@
 
 
 def remove_bracket(string):
-    if stringy is None:
+    if string is None:
         return
     b_num = 0
     if list(string)[0] != '(' or list(string)[-1] != ')':
