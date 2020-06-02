@@ -7,6 +7,11 @@
 """
 
 
+"""
+递归法实现
+"""
+
+
 class Test:
     def __init__(self):
         self.flag = None
@@ -49,14 +54,59 @@ class Test:
             return self.str_string(s, len(s))
 
 
+"""
+非递归法实现
+"""
+
+
+class Test2:
+    def __init__(self):
+        self.flag = None
+
+    def is_number(self, e):
+        return '0' <= e <= '9'
+
+    def get_flag(self):
+        return self.flag
+
+    def string_int(self, strs):
+        if strs is None:
+            self.flag = False
+            print("not is int")
+            return -1
+        self.flag = True
+        i = 0
+        res = 0
+        minus = False
+        if strs[i] == '-':
+            minus = True
+            i += 1
+        if strs[i] == '+':
+            minus = False
+            i += 1
+        while i < len(strs):
+            if self.is_number(strs[i]):
+                res = res * 10 + ord(strs[i]) - ord('0')
+            else:
+                self.flag = False
+                print("not is int")
+                return -1
+            i += 1
+        return -res if minus else res
+
+
 if __name__ == '__main__':
-    t = Test()
+    # t = Test()
+    t = Test2()
     s = '-543'
-    print(t.transform(s))
+    print(t.string_int(s))
+    # print(t.transform(s))
     s2 = '543'
-    print(t.transform(s2))
+    print(t.string_int(s2))
+    # print(t.transform(s2))
     s3 = '++54'
-    print(t.transform(s3))
+    # print(t.transform(s3))
+    t.string_int(s3)
 
 
 
