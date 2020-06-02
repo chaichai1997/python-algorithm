@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # author = "chaichai"
-from tree_array_transform import BiNode,array_to_tree
+from tree_array_transform import BiNode, array_to_tree
 
 """
 将二叉树转换为双向队列
