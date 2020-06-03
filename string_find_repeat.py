@@ -22,6 +22,24 @@ def find_repeat(strs):
     print("not repeat")
 
 
+"""
+方法二： 以时间换空间
+"""
+
+
+def find_repeat_time(strs):
+    l_s = len(s)
+    sign = [False] * 256
+    for i in range(l_s):
+        index = ord(strs[i])-ord('0')
+        if sign[index] is True:
+            print("repeat")
+            return
+        sign[index] = True
+    print("not repeat")
+
+
 if __name__ == '__main__':
-    s = 'good'
+    s = 'god'
     find_repeat(s)
+    find_repeat_time(s)
