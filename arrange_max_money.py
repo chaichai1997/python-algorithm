@@ -28,7 +28,7 @@ def find_max(n):
 
 
 if __name__ == '__main__':
-    count = 1000
+    count = 10000
     c = 0
     for i in range(count):
         if find_max(10):
