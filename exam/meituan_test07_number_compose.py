@@ -10,6 +10,34 @@ return 2
 """
 
 
+# def seperate(n, m, result, count, c):
+#     if n < 0 or m == 0:
+#         return
+#     else:
+#         if 0 > count > m:
+#             return
+#         elif count == m:
+#             if n == 0:
+#                 c.append(1)
+#                 return
+#             else:
+#                 return
+#     if count == 0:
+#         i = 1
+#     else:
+#         i = result[count - 1]
+#     while i <= n:
+#         try:
+#             result[count] = i
+#             count += 1
+#             seperate(n - i, m, result, count, c)
+#             count -= 1
+#             i += 1
+#         except:
+#             break
+#     return c
+
+
 def seperate(n, m):
     if m == 1 or n - m == 1 or n == m:
         dict[(n, m)] = 1
@@ -26,7 +54,13 @@ def seperate(n, m):
 
 
 if __name__ == '__main__':
-    n, m = map(int, input().split())
-    dict = {}
-    seperate(n, m)
-    print(dict[n, m])
+    data = input().split()
+    n = int(data[0])
+    m = int(data[1])
+    count = 0
+    c = []
+    result = [0] * m
+    # dict = {}
+    print(len(seperate(n, m, result, count, c)))
+    # seperate(n, m)
+    # print(dict[n, m])
